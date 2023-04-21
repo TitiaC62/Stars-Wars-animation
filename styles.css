@@ -19,6 +19,8 @@
 
     color: #4ee;
     font-size: 3.4vw;
+    font-weight: 400;
+    text-align: left;
 
     opacity: 0;
     animation-name: intro;
@@ -46,12 +48,14 @@
 }
 
 .opening-stars{
+
+    position: absolute;
     
-    background-image: url(img/background.jpg);
+    
+    background-image: url(img/stars-bg.png);
+    background-repeat: repeat;
     width: 100%;
     height: 100%;
-
-   
 
     opacity: 0;
 
@@ -60,6 +64,8 @@
     animation-timing-function: linear;
     animation-delay: 6s;
     animation-fill-mode: forwards;
+
+    perspective: 25vh;
 }
 
 @keyframes stars {
@@ -98,28 +104,32 @@
     }
 }
 
+
+.opening-crawl{
+    position: absolute;
+    font-size: 4.5vw;
+    font-weight: 700;
+    text-align: justify;
+    color: #ebd71c;
+    animation: crawl 20s linear 16s forwards;
+    top: 120vh;
+    transform: rotateX(20deg);
+    opacity: 1;
+}
+
+
 .crawl-header{
     text-align: center;
+    margin-bottom: 80px;
 }
 
 .crawl-title{
     text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
-.crawl-text{
-    position: absolute;
-    top: 150vh;
-    color: #ebd71c;
-    font-size: 4.5vw;
-    text-align: justify;
-    font-weight: 700;
-
-    perspective: 500px;
-
-    transform: rotateX(20deg);
-    opacity: 1;
-
-    animation: crawl 20s linear 16s forwards;
+.crawl-text > p{
+    margin: 30px 0;
 }
 
 @keyframes crawl {
